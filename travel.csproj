@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBB9AAA1-5553-4AE3-B907-F9B9213A4017}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>travel</RootNamespace>
+    <AssemblyName>travel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>palms_palm_tree_icon_188533.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>lib\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>lib\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountOrders.Designer.cs">
+      <DependentUpon>AccountOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addUser.Designer.cs">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkingTourist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkingTourist.Designer.cs">
+      <DependentUpon>checkingTourist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractLog.Designer.cs">
+      <DependentUpon>ContractLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="DetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailInfo.Designer.cs">
+      <DependentUpon>DetailInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="getAddress.Designer.cs">
+      <DependentUpon>getAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guide.Designer.cs">
+      <DependentUpon>Guide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel.Designer.cs">
+      <DependentUpon>Hotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeOrder.Designer.cs">
+      <DependentUpon>MakeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="md5.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Special_Features.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Special_Features.Designer.cs">
+      <DependentUpon>Special_Features.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tour.Designer.cs">
+      <DependentUpon>Tour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourOperator.Designer.cs">
+      <DependentUpon>TourOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordHelper.cs" />
+    <Compile Include="workWithHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="workWithHotel.Designer.cs">
+      <DependentUpon>workWithHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="workWithTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="workWithTour.Designer.cs">
+      <DependentUpon>workWithTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="workWithTourist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="workWithTourist.Designer.cs">
+      <DependentUpon>workWithTourist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="workWithTourOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="workWithTourOperator.Designer.cs">
+      <DependentUpon>workWithTourOperator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountOrders.resx">
+      <DependentUpon>AccountOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addUser.resx">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkingTourist.resx">
+      <DependentUpon>checkingTourist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractLog.resx">
+      <DependentUpon>ContractLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailInfo.resx">
+      <DependentUpon>DetailInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getAddress.resx">
+      <DependentUpon>getAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guide.resx">
+      <DependentUpon>Guide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel.resx">
+      <DependentUpon>Hotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeOrder.resx">
+      <DependentUpon>MakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Special_Features.resx">
+      <DependentUpon>Special_Features.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tour.resx">
+      <DependentUpon>Tour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourOperator.resx">
+      <DependentUpon>TourOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="workWithHotel.resx">
+      <DependentUpon>workWithHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="workWithTour.resx">
+      <DependentUpon>workWithTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="workWithTourist.resx">
+      <DependentUpon>workWithTourist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="workWithTourOperator.resx">
+      <DependentUpon>workWithTourOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="blank-dogovora-okazanija-turisticheskih-uslug.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="blank-vosvrata.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="kladr.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Microsoft.Office.Interop.Excel.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\Microsoft.Office.Interop.Word.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\MySqlBackup.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\OFFICE.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\System.Data.SQLite.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\BouncyCastle.Crypto.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\Google.Protobuf.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\K4os.Compression.LZ4.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\K4os.Compression.LZ4.Streams.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\K4os.Hash.xxHash.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\libzstd.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\MySql.Data.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\MySql.Data.EntityFramework.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\MySql.Data.EntityFramework.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\MySql.Data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\MySql.Web.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\MySql.Web.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\System.Buffers.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\System.Runtime.CompilerServices.Unsafe.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\Ubiety.Dns.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\v4.5.2\ZstdNet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="palms_palm_tree_icon_188533.ico" />
+    <Content Include="TourImage\arrow_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\arrow_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\picture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Summer Majesty Resort\Summer Majesty Resort_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Summer Majesty Resort\Summer Majesty Resort_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Гранд\Гранд_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Гранд\Гранд_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Зупегелахт\Зупегелахт_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Зупегелахт\Зупегелахт_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Литфрден\Литфрден_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Литфрден\Литфрден_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Намад\Намад_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Намад\Намад_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Премьер\Премьер_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Премьер\Премьер_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Тибебевод\Тибебевод_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Тибебевод\Тибебевод_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Хидаебуф\Хидаебуф_1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TourImage\Хидаебуф\Хидаебуф_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Резервная копия базы данных\db_tourism-2023.06.14_05.45.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Резервная копия базы данных\db_tourism-2023.06.14_09.09.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Резервная копия базы данных\db_tourism-2023.06.14_10.11.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Резервная копия базы данных\db_tourism-2023.06.14_19.29.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Резервная копия базы данных\db_tourism-2023.06.14_19.41.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Резервная копия базы данных\empty.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
